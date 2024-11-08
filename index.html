@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz de Eisenhower</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Matriz de Eisenhower</h1>
+        <div class="input-area">
+            <input type="text" id="taskInput" placeholder="Digite a tarefa">
+            <select id="taskPriority">
+                <option value="important-urgent">Importante e Urgente</option>
+                <option value="important-not-urgent">Importante, mas Não Urgente</option>
+                <option value="not-important-urgent">Não Importante, mas Urgente</option>
+                <option value="not-important-not-urgent">Não Importante e Não Urgente</option>
+            </select>
+            <button onclick="addTask()">Adicionar Tarefa</button>
+        </div>
+
+        <div class="eisenhower-matrix">
+            <div id="important-urgent" class="matrix-section" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>Importante e Urgente</h2>
+            </div>
+            <div id="important-not-urgent" class="matrix-section" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>Importante, mas Não Urgente</h2>
+            </div>
+            <div id="not-important-urgent" class="matrix-section" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>Não Importante, mas Urgente</h2>
+            </div>
+            <div id="not-important-not-urgent" class="matrix-section" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>Não Importante e Não Urgente</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
